@@ -10,5 +10,5 @@ export const initialState: Readonly<BtcPrice | null> = {
 
 export const btcReducer = createReducer(
   initialState,
-  on(BtcActions.addBTCPrice, (_state, price) => price)
+  on(BtcActions['cx/btc/update'], (_state, price) => price)
 );

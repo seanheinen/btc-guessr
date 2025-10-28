@@ -1,10 +1,33 @@
-<mat-card appearance="outlined">
+@let _btcPrice = btcPrice();
+
+<span class="spacer"></span>
+<mat-card class="btc-price" appearance="outlined">
   <mat-card-header>
-    @let _btcPrice = btcPrice();
-    <mat-card-title>BTC GUESSR</mat-card-title>
-    <mat-card-subtitle>${{ _btcPrice.price | number : '1.2-2' }}</mat-card-subtitle>
+    <mat-card-title>BTC PRICE</mat-card-title>
   </mat-card-header>
+  <mat-card-content>
+    <h1>{{ _btcPrice.price | number : '1.2-2' }}</h1>
+  </mat-card-content>
+</mat-card>
+<span class="gap"></span>
+<mat-card class="guess" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Guess the price</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Guess whether the price will increase or decrease after the next 60 seconds!</p>
+  </mat-card-content>
   <mat-card-actions>
-    <button matButton>Learn More</button>
+    <button matButton (click)="createHigherGuess()">
+      <mat-icon>arrow_upward</mat-icon>
+      Higher
+    </button>
+    <span class="spacer"></span>
+    <button matButton (click)="createLowerGuess()">
+      <mat-icon>arrow_downward</mat-icon>
+      Lower
+    </button>
   </mat-card-actions>
 </mat-card>
+<span class="spacer"></span>

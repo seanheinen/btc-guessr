@@ -19,7 +19,7 @@ export class BtcEffect {
       .asObservable()
       .pipe(
         map((averagePrice) =>
-          BtcActions.addBTCPrice({
+          BtcActions['cx/btc/update']({
             price: +parseFloat(averagePrice.w).toFixed(2),
             timestamp: averagePrice.E,
           })

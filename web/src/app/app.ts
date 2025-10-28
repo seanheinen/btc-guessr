@@ -40,7 +40,7 @@ export class App {
     this.dialog.open(ChangeUsernameDialog);
   }
   resetScore() {
-    this.store.dispatch(UserActions.changeScore({ score: 0 }));
+    this.store.dispatch(UserActions['cx/user/change-score']({ score: 0 }));
   }
 }
 
@@ -80,7 +80,7 @@ export class ChangeUsernameDialog implements OnInit {
   }
 
   save(): void {
-    this.store.dispatch(UserActions.changeUsername({ username: this.username() }));
+    this.store.dispatch(UserActions['cx/user/update-username']({ username: this.username() }));
     this.dialogRef.close();
   }
 }
