@@ -1,0 +1,16 @@
+{
+  "name": "bitcoin-guessr",
+  "version": "1.0.0",
+  "description": "Bitcoin price prediction game",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"pnpm run api\" \"pnpm run web\"",
+    "api": "cd api && pnpm run start",
+    "web": "cd web && pnpm start",
+    "install": "cd api && pnpm install && cd ../web && pnpm install",
+    "build": "cd api && pnpm run build && cd ../web && pnpm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
