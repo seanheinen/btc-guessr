@@ -12,5 +12,7 @@ export const initialState: Readonly<User> = {
 export const userReducer = createReducer(
   initialState,
   on(UserActions['cx/user/update-username'], (_state, { username }) => ({ ..._state, username })),
-  on(UserActions['cx/user/change-score'], (_state, { score }) => ({ ..._state, score }))
+  on(UserActions['cx/user/reset-score'], (_state) => ({ ..._state, score: 0 })),
+  on(UserActions['cx/user/increment-score'], (_state) => ({ ..._state, score: _state.score + 1 })),
+  on(UserActions['cx/user/decrement-score'], (_state) => ({ ..._state, score: _state.score - 1 }))
 );

@@ -40,7 +40,7 @@ export class App {
     this.dialog.open(ChangeUsernameDialog);
   }
   resetScore() {
-    this.store.dispatch(UserActions['cx/user/change-score']({ score: 0 }));
+    this.store.dispatch(UserActions['cx/user/reset-score']());
   }
 }
 
