@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <button matButton routerLink="./">
+    Home
+  </button>
+  <button matButton routerLink="/leaderboard">
+    Leaderboard
+  </button>
+  <span class="spacer"></span>
+  <button matIconButton [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    @let _user = user();
+    <div class="username">{{ _user.username }}</div>
+    <button mat-menu-item (click)="changeUsername()">Change username</button>
+    <button mat-menu-item (click)="resetScore()">Reset score</button>
+  </mat-menu>
+</mat-toolbar>
+<router-outlet></router-outlet>

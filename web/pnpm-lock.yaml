@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ^20.3.0
         version: 20.3.7(@angular/common@20.3.7(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(@angular/platform-browser@20.3.7(@angular/common@20.3.7(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2))(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2)))(rxjs@7.8.2)
+      '@faker-js/faker':
+        specifier: ^10.1.0
+        version: 10.1.0
       '@ngrx/effects':
         specifier: ^20.1.0
         version: 20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(@ngrx/store@20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2))(rxjs@7.8.2)
@@ -41,6 +44,9 @@ importers:
       '@ngrx/store-devtools':
         specifier: ^20.1.0
         version: 20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(@ngrx/store@20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2))(rxjs@7.8.2)
+      ngrx-store-persist:
+        specifier: ^1.0.26
+        version: 1.0.26(@ngrx/store@20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2))
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -502,6 +508,10 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@faker-js/faker@10.1.0':
+    resolution: {integrity: sha512-C3mrr3b5dRVlKPJdfrAXS8+dq+rq8Qm5SNRazca0JKgw1HQERFmrVb0towvMmw5uu8hHKNiQasMaR/tydf3Zsg==}
+    engines: {node: ^20.19.0 || ^22.13.0 || ^23.5.0 || >=24.0.0, npm: '>=10'}
 
   '@inquirer/ansi@1.0.1':
     resolution: {integrity: sha512-yqq0aJW/5XPhi5xOAL1xRCpe1eh8UFVgYFpFsjEqmIR8rKLyP+HINvFXwUaxYICflJrVlxnp7lLN6As735kVpw==}
@@ -1359,6 +1369,10 @@ packages:
       supports-color:
         optional: true
 
+  deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+
   depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
@@ -1872,6 +1886,11 @@ packages:
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
+
+  ngrx-store-persist@1.0.26:
+    resolution: {integrity: sha512-sUg40ARwXbT30V/cMvqLVypyn9zo/drO5+l5xaTuGipPq/3oSEkKttvlduud38IIj8HHxwVFgn3ScL/5vlo7kw==}
+    peerDependencies:
+      '@ngrx/store': ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 ||  ^10.0.0 ||  ^11.0.0 ||  ^12.0.0 ||  ^13.0.0 ||  ^14.0.0 ||  ^15.0.0  ||  >=15.0.0
 
   node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
@@ -2883,6 +2902,8 @@ snapshots:
   '@esbuild/win32-x64@0.25.9':
     optional: true
 
+  '@faker-js/faker@10.1.0': {}
+
   '@inquirer/ansi@1.0.1': {}
 
   '@inquirer/checkbox@4.3.0':
@@ -3635,6 +3656,8 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
+  deepmerge@4.3.1: {}
+
   depd@2.0.0: {}
 
   detect-libc@1.0.3:
@@ -4174,6 +4197,11 @@ snapshots:
   nanoid@3.3.11: {}
 
   negotiator@1.0.0: {}
+
+  ngrx-store-persist@1.0.26(@ngrx/store@20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2)):
+    dependencies:
+      '@ngrx/store': 20.1.0(@angular/core@20.3.7(@angular/compiler@20.3.7)(rxjs@7.8.2))(rxjs@7.8.2)
+      deepmerge: 4.3.1
 
   node-addon-api@6.1.0:
     optional: true

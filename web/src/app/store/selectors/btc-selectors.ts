@@ -1,4 +1,5 @@
 import { createFeatureSelector } from '@ngrx/store';
-import { BtcPrice } from '@models/btc-price';
+import { BtcPrice } from '@shared/models/btc-price';
 
-export const selectBtcPrice = createFeatureSelector<Readonly<BtcPrice>>('btc');
+export const selectBtcPrice = createFeatureSelector<Readonly<BtcPrice>>('btcPrice');
+  

@@ -1,7 +1,8 @@
 <mat-card appearance="outlined">
   <mat-card-header>
+    @let _btcPrice = btcPrice();
     <mat-card-title>BTC GUESSR</mat-card-title>
-    <mat-card-subtitle>\${{ btcPrice().price | number : '1.2-2' }}</mat-card-subtitle>
+    <mat-card-subtitle>${{ _btcPrice.price | number : '1.2-2' }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
     <button matButton>Learn More</button>

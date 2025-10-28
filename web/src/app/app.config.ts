@@ -2,21 +2,16 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessC
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideStore } from '@ngrx/store';
-import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { btcReducer } from './store/reducers';
-import { BtcEffect } from './store/effects';
+import { effectsProvider, storeProvider } from './store/store-provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(routes),
-    provideStore({
-      btc: btcReducer,
-    }),
-    provideEffects([BtcEffect]),
+    storeProvider,
+    effectsProvider,
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
   ],
 };

@@ -22,7 +22,7 @@
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@models/*": ["../shared/models/*"]
+      "@shared/*": ["../shared/*"]
     }
   }
 }
