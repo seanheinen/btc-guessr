@@ -21,7 +21,7 @@ import { GuessDirection } from '../../../../shared/models';
 import { selectGuess } from '../store/selectors/guess-selectors';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
-const ROUND_DURATION = 5;
+const ROUND_DURATION = 60;
 
 @Component({
   selector: 'cx-guessr',

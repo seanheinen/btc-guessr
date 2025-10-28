@@ -27,6 +27,12 @@
     <p>You've guessed that it will be {{ _guess.direction === GuessDirection.higher ? 'UP' : 'DOWN' }} from ${{ _guess.btcPrice | number : '1.2-2' }}</p>
     @if (_secondsSinceGuess) {
     <p>Find out if you're right in: {{ROUND_DURATION - _secondsSinceGuess}} seconds</p>
+    @let _priceChange = _btcPrice.price - _guess.btcPrice;
+      @if (_priceChange > 0) {
+      <p>The price has gone up by {{ _priceChange | number : '1.2-2' }}</p>
+      } @else {
+      <p>The price has gone down by {{ _priceChange*-1 | number : '1.2-2' }}</p>
+      }
     } @else {
     <p>The round has concluded</p>
     }
