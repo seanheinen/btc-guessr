@@ -1,5 +1,7 @@
 ## Showcase
 
+For the purpose of the below showcase, the round duration was lowered to 10 seconds.
+
 https://github.com/user-attachments/assets/36841a65-bd6c-47d8-90b1-eb763c8a18d3
 
 ## Install
