@@ -1,3 +1,7 @@
+## Showcase
+
+https://github.com/user-attachments/assets/36841a65-bd6c-47d8-90b1-eb763c8a18d3
+
 ## Install
 
 Install all dependencies for web and api.
